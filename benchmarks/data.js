@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761297964383,
+  "lastUpdate": 1761303633804,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "c0d7145a5a70af86a8981c8b86612bda4fc8e7cd",
-          "message": "Merge pull request #261 from czlonkowski/feat/integration-tests-phase-5\n\nfeat: Phase 5 integration tests (workflow management)",
-          "timestamp": "2025-10-05T00:05:34+02:00",
-          "tree_id": "523b5d117eb634cd893f40b6644e4d1fdbccfc21",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/c0d7145a5a70af86a8981c8b86612bda4fc8e7cd"
-        },
-        "date": 1759615640791,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0192,
-            "range": "0.2582",
-            "unit": "ms",
-            "extra": "52110 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.2384,
-            "range": "0.9481999999999995",
-            "unit": "ms",
-            "extra": "309 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0046,
-            "range": "0.2697",
-            "unit": "ms",
-            "extra": "215115 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0661,
-            "range": "0.3007",
-            "unit": "ms",
-            "extra": "15123 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1878,6 +1826,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/0e26ea6a68d2d61d40f7d33d7361a8fc58ed4d91"
         },
         "date": 1761297963703,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "56114f041b245717fa3ea832b2f5f9d451160813",
+          "message": "Merge pull request #359 from czlonkowski/feature/auto-update-node-versions",
+          "timestamp": "2025-10-24T12:58:31+02:00",
+          "tree_id": "ac38940e215b99e2b626c8567cb1152c1149a174",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/56114f041b245717fa3ea832b2f5f9d451160813"
+        },
+        "date": 1761303633076,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
