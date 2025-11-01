@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761638228328,
-  "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
+  "lastUpdate": 1761984866960,
+  "repoUrl": "https://github.com/Xyerophyte/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e2c8fd0125d91e6040353c1c87b765c4d1657c92",
-          "message": "Merge pull request #283 from czlonkowski/update/n8n-and-templates-20251007\n\nUpdate n8n to v1.114.3 and optimize template fetching (v2.17.2)",
-          "timestamp": "2025-10-07T15:07:43+02:00",
-          "tree_id": "d1b46d94ffd8ed49dc683e5b84deb2c1d7effa96",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/e2c8fd0125d91e6040353c1c87b765c4d1657c92"
-        },
-        "date": 1759842584773,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0193,
-            "range": "0.2432",
-            "unit": "ms",
-            "extra": "51864 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.2722,
-            "range": "1.7661000000000002",
-            "unit": "ms",
-            "extra": "306 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0051,
-            "range": "0.3578",
-            "unit": "ms",
-            "extra": "196871 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0663,
-            "range": "0.38939999999999997",
-            "unit": "ms",
-            "extra": "15080 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1626,6 +1574,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/3f427f952836fd35cb6d054a45d179d88b9cb37b"
         },
         "date": 1761638228013,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "99984066+Xyerophyte@users.noreply.github.com",
+            "name": "Harsh Abasaheb Chavan",
+            "username": "Xyerophyte"
+          },
+          "committer": {
+            "email": "99984066+Xyerophyte@users.noreply.github.com",
+            "name": "Harsh Abasaheb Chavan",
+            "username": "Xyerophyte"
+          },
+          "distinct": true,
+          "id": "2b994a06e545269da6eca414b01d6e12ff2755b3",
+          "message": "fix: Windows graceful shutdown - avoid libuv assertion failure (v2.22.9)\n\n- Fixed libuv assertion: !(handle->flags & UV_HANDLE_CLOSING)\n- Made stdin cleanup platform-aware (skip destroy() on Windows)\n- Added Windows shutdown regression tests\n- Added Windows CI workflow\n- Updated documentation and version to 2.22.9\n\nThis critical fix resolves the issue where Windows users experienced crashes\nwhen stopping the MCP server, preventing reliable use with Claude Desktop.\nThe fix detects Windows platform and only calls process.stdin.pause()\ninstead of destroy() to avoid double-closing libuv async handles.\n\nCloses issue regarding Windows crashes during graceful shutdown.",
+          "timestamp": "2025-11-01T08:11:56Z",
+          "tree_id": "c5b3af7ac5bccaf02b13f7b74b3bd0362ba078bc",
+          "url": "https://github.com/Xyerophyte/n8n-mcp/commit/2b994a06e545269da6eca414b01d6e12ff2755b3"
+        },
+        "date": 1761984866682,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
